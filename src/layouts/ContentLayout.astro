@@ -1,0 +1,37 @@
+---
+import { type CollectionEntry } from "astro:content"
+import "../styles/global.css"
+
+interface Props {
+    pageData: CollectionEntry<'pages'>['data'];
+}
+
+const { pageData } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+        <title>{pageData.title}</title>
+    </head>
+    <body>
+        <main>
+            <header>
+                <span class="date">{pageData.date}</span>
+            </header>
+
+            <div class="content flex-1 flex-col">
+                <slot />
+            </div>
+
+            <footer>© 2025 All rights reserved.</footer>
+        </main>
+    </body>
+</html>
+
+<style>
+</style>

@@ -1,0 +1,36 @@
+---
+const { frontmatter } = Astro.props
+import "../styles/global.css"
+import GithubIcon from "../icons/github.svg"
+import XIcon from "../icons/x.svg"
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+        <title>{frontmatter.title}</title>
+    </head>
+    <body>
+        <main>
+            <div class="content flex-1 flex-col">
+                <slot />
+            </div>
+			<footer class="flex gap-[2rem] justify-center items-center">
+				<a class="icon" href="https://www.github.com/lentejarabiosa">
+					<GithubIcon width={16} height={16} />
+				</a>
+				<a class="icon" href="https://www.x.com">
+					<XIcon width={16} height={16} />
+				</a>
+				<span>© 2025 All rights reserved.</span>
+			</footer>
+        </main>
+    </body>
+</html>
+
+<style>
+</style>

@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme {
+	--color-black: var(--black);
+	--color-white: var(--white);
+	--color-highlight: var(--highlight);
+	--color-border: var(--border);
+	--color-muted: var(--muted);
+}
+
+@font-face {
+	font-family: 'JetBrainsMono';
+	src: url('/fonts/JetBrainsMono-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SpaceGrotesk';
+	src: url('/fonts/SpaceGrotesk-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	--bg: #181616;
+	--fg-header: #fff;
+	--hl-bg: #2D4F67;
+	--hl-fg: #C8C093;
+	--muted: #727169;
+	--fg: #c5c9c5;
+	--subtle: #363646;
+	--link: #DCD7BA;
+
+	--margin: calc((100vw - 600px) / 2);
+}
+
+html,
+body {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	color: var(--fg);
+	font-family: 'JetBrainsMono';
+	background-color: var(--bg);
+	font-size: 14px;
+}
+
+main {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 2rem 0;
+	gap: 1rem;
+}
+
+main .content {
+	font-size: 1rem;
+}
+
+main .content>*:not(.astro-code) {
+	margin-inline: var(--margin);
+}
+
+main .content> :first-child {
+	margin-top: 0;
+}
+
+.date {
+	font-size: .9rem;
+	color: var(--muted);
+}
+
+header,
+footer {
+	margin: 0 var(--margin);
+}
+
+footer {
+	color: var(--subtle);
+	font-size: 0.9rem;
+	display: flex;
+	justify-content: center;
+}
+
+.astro-code {
+	margin: 2rem 0;
+	padding: 15px var(--margin);
+}
+
+br {
+	line-height: 1rem;
+}
+
+h1,
+h2 {
+	font-family: "SpaceGrotesk";
+	color: var(--fg-header);
+	margin-bottom: .5rem;
+	margin-top: 3rem;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+ul li::before {
+	content: '*';
+	margin: 0 1rem;
+}
+
+.content a {
+	text-decoration: underline;
+	/* color: var(--link); */
+}
+
+p {
+	margin: .5rem 0;
+	color: var(--fg);
+}
+
+*::selection {
+	background-color: var(--hl-bg);
+	color: var(--hl-fg);
+}
+
+@media (hover: hover) {
+	.content a:hover {
+		background-color: var(--fg);
+		color: var(--bg);
+		text-decoration: none;
+	}
+
+	.icon:hover {
+		color: var(--fg);
+	}
+}
+
+@media (width < 630px) {
+	main {
+		margin: 0;
+	}
+
+	h1 {
+		font-size: 1.5rem;
+	}
+
+	h2 {
+		font-size: 1.25rem;
+	}
+
+	header,
+	footer {
+		margin: 0 15px;
+	}
+
+	main .content>*:not(.astro-code) {
+		margin-inline: 15px;
+	}
+
+	.astro-code {
+		padding: 15px;
+	}
+}

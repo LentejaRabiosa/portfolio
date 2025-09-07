@@ -8,22 +8,6 @@
 	--color-muted: var(--muted);
 }
 
-@font-face {
-	font-family: 'JetBrainsMono';
-	src: url('/fonts/JetBrainsMono-Regular.ttf');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'SpaceGrotesk';
-	src: url('/fonts/SpaceGrotesk-Regular.ttf');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
 :root {
 	--bg: #181616;
 	--fg-header: #fff;
@@ -43,7 +27,7 @@ body {
 	height: 100%;
 	width: 100%;
 	color: var(--fg);
-	font-family: 'JetBrainsMono';
+	font-family: 'JetBrains Mono';
 	background-color: var(--bg);
 	font-size: 14px;
 }
@@ -96,7 +80,7 @@ br {
 
 h1,
 h2 {
-	font-family: "SpaceGrotesk";
+	font-family: "Space Grotesk";
 	color: var(--fg-header);
 	margin-bottom: .5rem;
 	margin-top: 3rem;

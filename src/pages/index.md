@@ -4,8 +4,9 @@ title: Mad Lentil
 ---
 
 # Mad Lentil
-Self-taught programmer. I like compilers and low level stuff.
+Self-taught programmer.
 
 <br>
 
-- [This portfolio](https://www.github.com/LentejaRabiosa/portfolio)
+ - [This portfolio](https://www.github.com/LentejaRabiosa/portfolio)
+ - [My dotfiles](https://www.github.com/LentejaRabiosa/dotfiles)

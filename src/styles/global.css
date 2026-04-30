@@ -1,22 +1,10 @@
 @import "tailwindcss";
 
-@theme {
-    --color-black: var(--black);
-    --color-white: var(--white);
-    --color-highlight: var(--highlight);
-    --color-border: var(--border);
-    --color-muted: var(--muted);
-}
-
 :root {
-    --bg: #14171d;
-    --fg-header: #fff;
-    --hl-bg: #2D4F67;
-    --hl-fg: #C8C093;
-    --muted: #727169;
+    --bg: #14171D;
     --fg: #C5C9C7;
-    --subtle: #363646;
-    --link: #DCD7BA;
+    --fg-header: #FFF;
+    --muted: #717C7C;
 
     --margin: calc((100vw - 600px) / 2);
 }
@@ -63,7 +51,7 @@ footer {
 }
 
 footer {
-    color: var(--subtle);
+    color: var(--muted);
     font-size: 0.9rem;
     display: flex;
     justify-content: center;
@@ -111,8 +99,8 @@ p {
 }
 
 *::selection {
-    background-color: var(--hl-bg);
-    color: var(--hl-fg);
+    background-color: var(--fg);
+    color: var(--bg);
 }
 
 @media (hover: hover) {
